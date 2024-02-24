@@ -1,0 +1,30 @@
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.navContainer {
+  display: flex;
+  padding-top: 20px;
+  justify-content: center; /* Center the navbar horizontally */
+  border-bottom: solid 2px #a48731;
+  background-color: #0b0b0c;
+  font-size: 25px;
+}
+
+/* Remove default list styles */
+ul {
+  list-style: none;
+  padding-left: 10px;
+  color: black;
+}
+
+/* Style list items to appear in a row */
+li {
+  display: inline-block;
+  margin-right: 50px; /* Add margin between list items */
+}
+
+a:hover {
+  color: #a48731;
+}

@@ -1,0 +1,98 @@
+/* HEADER STYLE */
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/back-s-img.avif");
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -10px 10px 10px 20px #a48731;
+}
+
+.text {
+  margin-top: 2%;
+  text-align: left;
+}
+
+.text h1 {
+  font-weight: bolder;
+}
+.welcome-text {
+  margin-top: 20px;
+  /* font-size: 15px; */
+}
+
+.img-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  margin-right: 0;
+}
+
+/* Set the dimensions and styling for the image */
+.img-container img {
+  width: 32%;
+  height: 500px;
+  object-fit: cover; /* or use 'contain' for a different scaling option */
+  margin-right: 10px; /* Add margin for spacing between images */
+}
+
+img:last-child {
+  margin-right: 0; /* Remove margin from the last image to avoid unnecessary spacing */
+}
+
+.about-sec {
+  background-color: aliceblue;
+  color: black;
+}
+.about-sec h2 {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.land-btn {
+  /* Remove all default setting styles */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+
+  /* Add new styles */
+  margin-top: 10px;
+  color: #a48731;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.land-btn a {
+  text-decoration: none; /* Remove default link underline */
+  color: inherit; /* Inherit the color from the parent */
+  transition: color 0.3s ease, border-bottom 0.2s ease; /* Define transition properties */
+  /* Add your custom styles for the link */
+}
+
+.land-btn a:hover {
+  color: #ffffff;
+  border: solid 2px #a48731;
+  background-color: #a48731;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.land-icon {
+  margin-right: 5px;
+}
+.land-icon:hover {
+  color: white;
+}
+
+.about-img {
+  width: 500px;
+  height: auto;
+}
