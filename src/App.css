@@ -11,15 +11,15 @@ p {
 h1,
 h2,
 h6 {
-  color: #a48731;
+  color: #89550d;
 }
 
 .app-main {
   flex: 1;
 }
 .footer {
-  background-color: #383838;
+  background-color: #0b3802;
   padding: 10px;
-  text-align: center;
+  text-align: left;
   margin-top: auto;
 }

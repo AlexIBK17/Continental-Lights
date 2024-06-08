@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import "../styles/card.css";
 const Card = ({ product }) => {
   // const { products } = useProductContext();
-  const { _id, title, price, imageURL } = product;
+  const { _id, title, price, imageURL, catigory } = product;
 
   return (
     <div className="card product-card">
-      <Link to={`/prods/${_id}`}>
+      <Link to={`/prods/${catigory}/${_id}`}>
         <div className="card-body product-link">
           <img className="imgCard" src={imageURL} alt={title} />
           <div className="product-title">{title}</div>

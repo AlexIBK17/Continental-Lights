@@ -1,15 +1,25 @@
 /* HEADER STYLE */
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../assets/back-s-img.avif");
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1)),
+    url("../assets/background img 22.jpg");
   background-size: cover;
+  color: rgb(0, 0, 0);
+  font-size: 19px;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: -10px 10px 10px 20px #a48731;
+  /* box-shadow: -10px 10px 10px 20px #a48731; */
+}
+
+.hi {
+  /* border: solid 2px black; */
+  margin-top: 7%;
+  margin-left: 3%;
+  margin-right: 50%;
+  align-items: center;
 }
 
 .text {
@@ -44,12 +54,20 @@ img:last-child {
   margin-right: 0; /* Remove margin from the last image to avoid unnecessary spacing */
 }
 
+.product-list-home {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
 .about-sec {
-  background-color: aliceblue;
-  color: black;
+  background-color: #0b3802;
+  color: rgb(255, 255, 255);
 }
 .about-sec h2 {
-  text-align: center;
+  text-align: left;
   margin-top: 5%;
 }
 
@@ -65,7 +83,7 @@ img:last-child {
 
   /* Add new styles */
   margin-top: 10px;
-  color: #a48731;
+  color: #89550d;
   font-size: 20px;
   font-weight: bolder;
 }
@@ -79,8 +97,8 @@ img:last-child {
 
 .land-btn a:hover {
   color: #ffffff;
-  border: solid 2px #a48731;
-  background-color: #a48731;
+  border: solid 2px #553f2a;
+  background-color: #553f2a;
   padding: 10px;
   border-radius: 20px;
 }

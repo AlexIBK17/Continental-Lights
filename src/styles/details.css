@@ -1,0 +1,20 @@
+.details-header {
+  margin: 2%;
+  display: flex;
+  /* flex-direction: column; */
+  min-height: 100vh;
+  border: solid 2px black;
+}
+
+.detailsImg {
+  height: 30vh;
+  width: auto;
+}
+.series-container {
+  flex: 1;
+  margin-top: auto;
+}
+
+.series-item {
+  border: solid 2px black;
+}

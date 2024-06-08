@@ -1,24 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/home.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { TypeAnimation } from "react-type-animation";
-import light from "../assets/light.png";
-
+import Card from "../components/card";
+import { getProduct } from "../api/apiHandler";
 const Home = () => {
+  const [topProd, setTopProd] = useState([]);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      try {
+        const response = await getProduct();
+        const data = response.data;
+        const filteredProduct = data.filter((product) => {
+          const price = parseFloat(product.price.replace("$", ""));
+          return price > 100;
+        });
+        setTopProd(filteredProduct);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    }
+
+    fetchProducts();
+  }, []);
+
   return (
     <div>
       {/* LANDING PAGE  */}
       <header className="header">
-        <div className="container">
-          <div className="row">
-            <div className="text col-md-6">
+        <div className="">
+          <div className="row hi">
+            <div className="text">
               <h1>Hey There!</h1>
               <TypeAnimation
                 data-aos="fade-up"
                 sequence={[
-                  "Welcome to Continental Building Systems",
+                  "Welcome to Revival Lights",
                   2000,
                   "We deliver Luminous Elegance",
                   2000,
@@ -45,35 +65,34 @@ const Home = () => {
               </button>
             </div>
             <div className="col-md-6 img-container">
-              <img src="/image/backgroundImg2.jpg" alt="logo" />
-              <img src="/image/backgroundImage.jpg" alt="logo" />
-              <img src="/image/back-img3.jpg" alt="logo" />
+              {/* <img src="/image/Exhibit 01.webp" alt="logo" />
+              <img src="/image/Exhibit 02.webp" alt="logo" />
+              <img src="/image/hanging lamp.jpg" alt="logo" /> */}
             </div>
           </div>
         </div>
       </header>
+      {/* 
+      .
+      .
+      */}
       <section>
-        {/* ABOUT SECTION  */}
-        <div className="about-sec">
-          <div className="container">
-            <div className="row">
-              <h2>About</h2>
-              <p className="col-md-6">
-                <img className="about-img" src={light} alt="" />
-              </p>
-              <p className="col-md-6">
-                Continental Building Systems is a leading supplier of exquisite
-                building fixtures, specializing in lighting fixtures and
-                furniture. With a mission to enhance the aesthetic appeal of
-                structures, our goal is to provide splendid fixtures that
-                elevate the look of retail, commercial, and residential spaces.
-                Committed to excellence, we aspire to become the premier choice
-                for building fixtures in North America.
-              </p>
-            </div>
+        <div className="TopProd container-xl">
+          <h2>Top Products</h2>
+          Product images
+          <div className="product-list-home">
+            {topProd.map((product, index) => (
+              <Card key={index} product={product} />
+            ))}
           </div>
         </div>
       </section>
+      {/* 
+      .
+      .
+      .
+      .
+       */}
     </div>
   );
 };

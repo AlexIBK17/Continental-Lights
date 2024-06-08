@@ -7,9 +7,9 @@ a {
   display: flex;
   padding-top: 20px;
   justify-content: center; /* Center the navbar horizontally */
-  border-bottom: solid 2px #a48731;
-  background-color: #0b0b0c;
-  font-size: 25px;
+  /* border-bottom: solid 2px #a48731; */
+  background-color: #0b3802;
+  font-size: 20px;
 }
 
 /* Remove default list styles */
